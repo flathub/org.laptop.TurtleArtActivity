@@ -1,0 +1,11 @@
+diff --git a/activity/mimetypes.xml b/activity/mimetypes.xml
+index aa249558..9b58b8fa 100644
+--- a/activity/mimetypes.xml
++++ b/activity/mimetypes.xml
+@@ -3,5 +3,6 @@
+ <mime-type type="application/x-turtle-art">
+ <comment xml:lang="en">Turtle Art</comment>
+ <glob pattern="*.ta"/>
++<icon name="org.laptop.TurtleArtActivity-application-x-turtle-art"/>
+ </mime-type>
+ </mime-info>

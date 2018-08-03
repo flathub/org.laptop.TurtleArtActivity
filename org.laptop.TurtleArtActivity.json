@@ -191,11 +191,20 @@
                 {
                     "type": "patch",
                     "path": "turtleblocks-fix-expand.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "turtleblock-mime-icon-name.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "turtleblock-mimetype-desktop-file.patch"
                 }
             ],
             "post-install": [
                 "glib-compile-schemas /app/share/TurtleBlocks",
                 "install -D activity/turtleart.svg /app/share/icons/hicolor/scalable/apps/turtleart.svg",
+                "install -D activity/application-x-turtle-art.svg /app/share/icons/hicolor/scalable/mimetypes/org.laptop.TurtleArtActivity-application-x-turtle-art.svg",
                 "install -D activity/mimetypes.xml /app/share/mime/packages/org.laptop.TurtleArtActivity.xml"
             ]
         }
