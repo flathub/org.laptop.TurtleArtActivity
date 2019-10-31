@@ -1,9 +1,0 @@
-diff --git a/turtleblocks.desktop b/turtleblocks.desktop
-index 2ac34640..5615512f 100644
---- a/turtleblocks.desktop
-+++ b/turtleblocks.desktop
-@@ -15,3 +15,4 @@ Comment[es]=Un entorno de programación Logo
- Terminal=false
- StartupNotify=true
- Categories=Education;Art;
-+MimeType=application/x-turtle-art;
