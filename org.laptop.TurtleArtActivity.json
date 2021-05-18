@@ -1,7 +1,7 @@
 {
     "app-id": "org.laptop.TurtleArtActivity",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.34",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "rename-desktop-file": "turtleblocks.desktop",
     "rename-icon": "turtleart",
@@ -48,13 +48,13 @@
             "name": "python-dbus",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links \"file://${PWD}\" --install-option=\"--prefix=${FLATPAK_DEST}\" dbus-python"
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} dbus-python"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.12.tar.gz",
-                    "sha256": "cdd4de2c4f5e58f287b12013ed7b41dee81d503c8d0d2397c5bd2fb01badf260"
+                    "url": "https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.16.tar.gz",
+                    "sha256": "11238f1d86c995d8aed2e22f04a1e3779f0d70e587caffeab4857f3c662ed5a4"
                 }
             ]
         },
@@ -62,7 +62,7 @@
             "name": "decorator",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links \"file://${PWD}\" --install-option=\"--prefix=${FLATPAK_DEST}\" decorator"
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} decorator"
             ],
             "sources": [
                 {
@@ -105,7 +105,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/sugarlabs/turtleart-activity.git",
-                    "commit": "3625adde0840618bb5f5aec52fdf1d6ab1ae96c4"
+                    "commit": "986073ea5c660ad189863b4f4c1742c7839dc992"
                 },
                 {
                     "type": "patch",
