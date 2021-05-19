@@ -59,6 +59,20 @@
             ]
         },
         {
+            "name": "numpy",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} numpy"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://github.com/numpy/numpy/releases/download/v1.16.5/numpy-1.16.5.zip",
+                    "sha256": "8bb452d94e964b312205b0de1238dd7209da452343653ab214b5d681780e7a0c"
+                }
+            ]
+        },
+        {
             "name": "decorator",
             "buildsystem": "simple",
             "build-commands": [
