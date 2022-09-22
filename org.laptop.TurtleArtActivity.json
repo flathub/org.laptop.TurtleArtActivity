@@ -1,7 +1,7 @@
 {
     "app-id": "org.laptop.TurtleArtActivity",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.34",
+    "runtime-version": "42",
     "sdk": "org.gnome.Sdk",
     "rename-desktop-file": "turtleblocks.desktop",
     "rename-icon": "turtleart",
@@ -26,6 +26,8 @@
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
+        "/lib/python3.9/site-packages/numpy/tests",
+        "/lib/python3.9/site-packages/numpy/*/tests",
         "/share/aclocal",
         "/share/info",
         "/share/man"
@@ -44,57 +46,7 @@
             ]
         },
         "shared-modules/dbus-glib/dbus-glib-0.110.json",
-        {
-            "name": "python-dbus",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-index --find-links \"file://${PWD}\" --install-option=\"--prefix=${FLATPAK_DEST}\" dbus-python"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.12.tar.gz",
-                    "sha256": "cdd4de2c4f5e58f287b12013ed7b41dee81d503c8d0d2397c5bd2fb01badf260"
-                }
-            ]
-        },
-        {
-            "name": "decorator",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-index --find-links \"file://${PWD}\" --install-option=\"--prefix=${FLATPAK_DEST}\" decorator"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ba/19/1119fe7b1e49b9c8a9f154c930060f37074ea2e8f9f6558efc2eeaa417a2/decorator-4.4.0.tar.gz",
-                    "sha256": "86156361c50488b84a3f148056ea716ca587df2f0de1d34750d35c21312725de"
-                }
-            ]
-        },
-        {
-            "name": "telepathy-python",
-            "no-parallel-make": true,
-            "rm-configure": true,
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://telepathy.freedesktop.org/releases/telepathy-python/telepathy-python-0.15.19.tar.gz",
-                    "sha256": "244c0e1bf4bbd78ae298ea659fe10bf3a73738db550156767cc2477aedf72376"
-                },
-                {
-                    "type": "patch",
-                    "path": "telepathy-python-fix-build.patch"
-                },
-                {
-                    "type": "script",
-                    "dest-filename": "autogen.sh",
-                    "commands": [
-                        "autoreconf -vif"
-                    ]
-                }
-            ]
-        },
+        "python3-requirements.json",
         {
             "name": "turtleblocks",
             "buildsystem": "simple",
@@ -105,7 +57,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/sugarlabs/turtleart-activity.git",
-                    "commit": "3625adde0840618bb5f5aec52fdf1d6ab1ae96c4"
+                    "commit": "1a9037ad613e3bfadeb9cd2dd3f423c767a2522c"
                 },
                 {
                     "type": "patch",
@@ -118,6 +70,10 @@
                 {
                     "type": "patch",
                     "path": "turtleblock-mime-icon-name.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "turtleblock-bump-version.patch"
                 }
             ],
             "post-install": [

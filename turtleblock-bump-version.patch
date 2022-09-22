@@ -1,0 +1,12 @@
+diff --git a/activity/activity.info b/activity/activity.info
+index 7b4a1b86..d4d2235c 100644
+--- a/activity/activity.info
++++ b/activity/activity.info
+@@ -1,6 +1,6 @@
+ [Activity]
+ name = TurtleBlocks
+-activity_version = 220
++activity_version = 220-54
+ license = MIT;GPLv2+;LGPLv2+;LGPLv2.1+;GPLv3+
+ metadata_license = CC0-1.0
+ bundle_id = org.laptop.TurtleArtActivity
