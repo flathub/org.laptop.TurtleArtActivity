@@ -1,7 +1,7 @@
 {
     "app-id": "org.laptop.TurtleArtActivity",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
     "rename-desktop-file": "turtleblocks.desktop",
     "rename-icon": "turtleart",
@@ -26,8 +26,8 @@
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
-        "/lib/python3.9/site-packages/numpy/tests",
-        "/lib/python3.9/site-packages/numpy/*/tests",
+        "/lib/python3.10/site-packages/numpy/tests",
+        "/lib/python3.10/site-packages/numpy/*/tests",
         "/share/aclocal",
         "/share/info",
         "/share/man"
