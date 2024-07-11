@@ -71,6 +71,10 @@
                 {
                     "type": "patch",
                     "path": "turtleblock-bump-version.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "appstream.patch"
                 }
             ],
             "post-install": [

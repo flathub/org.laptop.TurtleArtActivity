@@ -1,0 +1,12 @@
+diff --git a/setup.py b/setup.py
+index 0b6e4977..2e386ae1 100755
+--- a/setup.py
++++ b/setup.py
+@@ -33,6 +33,7 @@ def generate_appdata(prefix, bundle_id):
+     ET.SubElement(root, 'translation', type='gettext').text = \
+         bundle_id
+     ET.SubElement(root, 'id').text = bundle_id
++    ET.SubElement(root, 'developer_name').text = "Sugar Labs Community"
+     ET.SubElement(root, 'launchable', type='desktop-id').text = \
+         bundle_id + ".desktop"
+     desc = ET.fromstring('<description><p>{}</p></description>'.format(
